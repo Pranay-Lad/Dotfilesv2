@@ -1,0 +1,34 @@
+#! /bin/sh
+
+#sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
+xrandr --output DP-4 --primary --mode 2560x1440 --rotate normal --output HDMI-0 --mode 1920x1080 --rotate normal --left-of DP-4 &
+bspc monitor DP-4 -d 1 2 3 4 5 11 12 13 &
+bspc monitor HDMI-0 -d 6 7 8 9 0 &
+bspc config window_gap 10 &
+
+bspc config split_ratio 0.52 &
+bspc config borderless_monocle true &
+bspc config single_monocle = true &
+bspc config gapless_monocle true &
+bspc config pointer_motion_interval 10 &
+bspc config border_width 0 &
+
+bspc rule -a blueman-manager state=floating &
+
+xsetroot -cursor_name left_ptr &
+
+#Autostart
+#feh --bg-scale ~/Downloads/Background1.jpg &
+feh --bg-scale ~/Downloads/Wallpaper6.jpg
+#feh --bg-scale ~/Downloads/Wallpaper5.jpg
+picom --config $HOME/.config/picom/picom.conf &
+polybar workspaces &
+polybar date &
+polybar now-playing &
+polybar volume &
+polybar Secondary &
+polybar Main &
+polybar date3 &
+
+# systemctl start bluetooth.service &
