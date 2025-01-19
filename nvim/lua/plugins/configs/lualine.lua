@@ -7,7 +7,7 @@ return {
 		local lualine = require("lualine")
 		lualine.setup({
 			options = {
-				theme = "everblush"
+				theme = "catppuccin"
 			}
 		})
 	end

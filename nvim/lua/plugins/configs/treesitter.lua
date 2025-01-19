@@ -6,7 +6,7 @@ return {
 		config.setup({
 			ensure_installed = {"lua", "cpp", "latex", "c", "vim", "vimdoc"},
 			highlight = {enable = true},
-			indent = {enable = true},
+			indent = {enable = false},
 		})
 	end
 }

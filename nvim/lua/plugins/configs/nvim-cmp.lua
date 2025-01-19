@@ -10,9 +10,10 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
-		vim.api.nvim_set_hl(0, "MyPmenu",{ fg = "#232a2d", bg = "NONE"})
-		vim.api.nvim_set_hl(0, "MyPmenuSel",{ fg = "#232a2d", bg = "#67b0e8"})
+		vim.api.nvim_set_hl(0, "MyPmenu",{ fg = "#181825", bg = "NONE"})
+		vim.api.nvim_set_hl(0, "MyPmenuSel",{ fg = "#181825", bg = "#67b0e8"})
 		
+			
 		vim.api.nvim_set_hl(0, "CmpItemAbbr",	{ fg = "#dadada", bg = "NONE"})
 		vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#67b0e8", bg = "NONE"})
 		vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#e5c76b", bg = "NONE"})						
@@ -29,7 +30,8 @@ return {
 				completion = cmp.config.window.bordered({
 					winhighlight = "Normal:Pmenu,FloatBorder:MyPmenu,CursorLine:MyPmenuSel,Search:PmenuSel",
 					scrollbar = false,
-			}),
+				}),
+				documentation = cmp.config.window.bordered(),
 
 			},
 			snippet = {
