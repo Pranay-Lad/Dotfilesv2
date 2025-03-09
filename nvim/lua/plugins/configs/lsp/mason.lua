@@ -15,7 +15,6 @@ return {
 				"clangd",
 				"lua_ls",
 				"pyright",
-				"texlab",
 			},
 
 			automatic_installation = true,
