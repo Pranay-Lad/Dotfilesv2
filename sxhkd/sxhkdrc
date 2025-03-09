@@ -6,6 +6,9 @@
 super + Return
 	alacritty
 
+super + a
+	kitty
+
 # program launcher
 super + space
 	$HOME/.config/rofi/launchers/type-6/launcher.sh
@@ -13,6 +16,12 @@ super + space
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+super + g
+	dmenu_run
+
+super + shift + c
+	~/.local/bin/bt_connect.sh
 
 # Application hotkeys
 
@@ -96,6 +105,9 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+alt + Tab
+	bspc node -f last.local
+
 # focus or send to the given desktop
 #super + {_,shift + }{1-9,0}
 #	bspc {desktop -f,node -d} '^{1-9,10}'
@@ -121,7 +133,7 @@ super + v
 super + b
 	bspc desktop -f 0
 
-alt + Tab
+super + Tab
 	bspc monitor --focus prev
 
 
