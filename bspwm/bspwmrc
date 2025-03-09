@@ -17,6 +17,9 @@ bspc config border_width 0 &
 bspc rule -a blueman-manager state=floating &
 
 xsetroot -cursor_name left_ptr &
+xset -dpms
+xset s off
+xset s noblank
 
 #Autostart
 #feh --bg-scale ~/Downloads/Background1.jpg &
