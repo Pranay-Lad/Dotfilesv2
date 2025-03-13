@@ -76,7 +76,7 @@ white = '#BAC2DE' # subtext1
 
 [font.normal]
 family = "Jetbrains Mono NerdFont"
-style = "Bold"
+style = "ExtraBold"
 
 [window]
 padding = {x = 20, y = 20}
