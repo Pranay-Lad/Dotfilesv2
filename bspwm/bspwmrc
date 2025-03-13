@@ -14,7 +14,10 @@ bspc config gapless_monocle true &
 bspc config pointer_motion_interval 10 &
 bspc config border_width 0 &
 
-bspc rule -a blueman-manager state=floating &
+bspc rule -a Blueman-manager state=floating &
+bspc rule -a "firefox-esr:Toolkit" state=floating rectangle=1024x576+820+450 &
+
+
 
 xsetroot -cursor_name left_ptr &
 xset -dpms
